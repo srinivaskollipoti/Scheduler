@@ -5,18 +5,19 @@
 
 ## Introduction
 
-A service scheduler for an in-person customer service center
+Checkin: A micro-service to persist new check-ins into the database while validating customer details.
 
-checkin: A micro-service to persist new checkin into database while validating customer details.
+Scheduler: A service layer which polls the MySQL database for new check-ins and prioritizes the service-availing queue.
 
-scheduler: A service layer which polls mysql db for new checkins and priortize the service availing queue.
-
-Mysql: A Relational database which holds customers and in-person appointment data.
+MySQL: A relational database that holds customer and in-person appointment data.
 
 ## Directory Structure
-     checkin         : A Python based microservices
-     scheduler       : A Python based microservices
-     mysql           : A MySQL schema and test data
+
+Checkin: A Python-based micro-service.
+
+Scheduler: A Python-based micro-service.
+
+MySQL: A MySQL schema and test data.
 
 
 ## System Design
@@ -73,8 +74,8 @@ Note: Please refer to port details in docker-compose.yml file and make sure used
           2. A Customer if checkin by any mode i.e any device allowed to checkin
      
      Customer:
-          1. Assuming about type of customer regular or vip is pre-determined and having customer details
-          2. A valid Customer payload is provided as request body upon validation inserted to APPOINTMENT table in MySQL Db.
+          1. The type of customer (regular or VIP) is pre-determined and the customer details are available.
+          2. Upon validation, a valid customer payload is provided as a request body and inserted into the APPOINTMENT table in the MySQL database.
           Note: /mysql/data.sql & /mysql/test-data.sql embodies the tabular structure for CUSTOMER and APPOINTMENT.
      
 
