@@ -97,10 +97,14 @@ A sample payload :
 
  MySQL database constitutes sample test  data and a snapshot of the CUSTOMER & APPOINTMENT table :
  
+ CUSTONER:
  
-![Uploading Screen Shot 2023-02-05 at 1.20.05 AM.png…]()
-<img width="1000" alt="Screen Shot 2023-02-05 at 1 19 37 AM" src="https://user-images.githubusercontent.com/54916661/216804905-44db9e30-1a79-4bda-99ac-12a181ad4c32.png">
-
+ <img width="1000" alt="Screen Shot 2023-02-05 at 1 19 37 AM" src="https://user-images.githubusercontent.com/54916661/216804942-9e487689-d3b5-4f7f-8796-06eaa35ba048.png">
+ 
+ 
+ APPOINTEMNT:
+ 
+ <img width="912" alt="Screen Shot 2023-02-05 at 1 20 05 AM" src="https://user-images.githubusercontent.com/54916661/216804962-f1495cb2-0e6f-4c3c-ad5c-a71dd7df8727.png">
 
        
 ## Next Steps: 
