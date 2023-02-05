@@ -5,7 +5,6 @@ from scheduler.service.priority_service import PrirorityScheduler
 
 
 class TestPriorityScheduler(unittest.TestCase):
-
     def setUp(self):
         self.priority_scheduler = PrirorityScheduler()
         self.appointment = AppointmentDao()
@@ -19,13 +18,15 @@ class TestPriorityScheduler(unittest.TestCase):
             {"VIP": False, "name": "Jake Doe"},
         ]
 
-        expected_result = deque([
-            {"VIP": True, "name": "Jane Doe"},
-            {"VIP": True, "name": "Joan Doe"},
-            {"VIP": False, "name": "John Doe"},
-            {"VIP": False, "name": "Jim Doe"},
-            {"VIP": False, "name": "Jake Doe"},
-        ])
+        expected_result = deque(
+            [
+                {"VIP": True, "name": "Jane Doe"},
+                {"VIP": True, "name": "Joan Doe"},
+                {"VIP": False, "name": "John Doe"},
+                {"VIP": False, "name": "Jim Doe"},
+                {"VIP": False, "name": "Jake Doe"},
+            ]
+        )
 
         result = self.priority_scheduler.process_queue(customer_list)
         self.assertEqual(result, expected_result)
@@ -37,10 +38,12 @@ class TestPriorityScheduler(unittest.TestCase):
 
     def test_process_queue(self):
         scheduler = PrirorityScheduler()
-        customers = [{"id": 1, "name": "A", "VIP": True},
-                     {"id": 2, "name": "B", "VIP": False},
-                     {"id": 3, "name": "C", "VIP": True},
-                     {"id": 4, "name": "D", "VIP": False}]
+        customers = [
+            {"id": 1, "name": "A", "VIP": True},
+            {"id": 2, "name": "B", "VIP": False},
+            {"id": 3, "name": "C", "VIP": True},
+            {"id": 4, "name": "D", "VIP": False},
+        ]
         priority_queue = scheduler.process_queue(customers)
         self.assertEqual(len(priority_queue), 4)
         self.assertEqual(priority_queue[0]["id"], 1)

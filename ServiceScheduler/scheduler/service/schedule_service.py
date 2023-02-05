@@ -6,7 +6,7 @@ from service.priority_service import PrirorityScheduler
 class SchedulingService:
     def __init__(self):
         self.priority_scheduler = PrirorityScheduler()
-        
+
     def priority_queue(self):
         """
         Retrieves the next customer to be served.

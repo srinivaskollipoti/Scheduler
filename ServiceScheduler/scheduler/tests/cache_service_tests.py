@@ -4,12 +4,15 @@ from collections import deque
 from service.schedule_service import SchedulingService
 from cache import Cache
 
+
 class TestCache(unittest.TestCase):
     def setUp(self):
         self.cache = Cache()
 
     def test_update_customer_queue(self):
-        with patch.object(SchedulingService, "priority_queue", return_value=["John", "Jane"]):
+        with patch.object(
+            SchedulingService, "priority_queue", return_value=["John", "Jane"]
+        ):
             self.assertEqual(self.cache.update_customer_queue(), ["John", "Jane"])
 
     def test_get_next_customer_with_non_empty_queue(self):

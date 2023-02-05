@@ -1,13 +1,14 @@
 import unittest
 from dao.appointment_dao import AppointmentDao
 
+
 class TestAppointmentDao(unittest.TestCase):
     def setUp(self):
         self.appointment_dao = AppointmentDao()
 
     def test_get_and_update_status(self):
         # Arrange
-        expected_output = [{'id': 1, 'name': 'John', 'status': 'RESOLVED'}]
+        expected_output = [{"id": 1, "name": "John", "status": "RESOLVED"}]
 
         # Act
         result = self.appointment_dao.get_and_update_status()
@@ -33,5 +34,6 @@ class TestAppointmentDao(unittest.TestCase):
         with self.assertRaises(Exception):
             self.appointment_dao.get_and_update_status()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

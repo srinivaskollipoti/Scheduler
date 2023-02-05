@@ -3,10 +3,11 @@ import unittest
 
 from flask import Flask
 from scheduler.cache.cache_service import Cache
+
 app = Flask(__name__)
 
-class GetNextCustomerTestCase(unittest.TestCase):
 
+class GetNextCustomerTestCase(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
 
@@ -15,7 +16,7 @@ class GetNextCustomerTestCase(unittest.TestCase):
         # set up a cache with a customer data in it
 
         # Act
-        response = self.app.get('/v1/appointment/next')
+        response = self.app.get("/v1/appointment/next")
 
         # Assert
         self.assertEqual(response.status_code, 200)
@@ -27,17 +28,18 @@ class GetNextCustomerTestCase(unittest.TestCase):
         cache = Cache()
         cache.set_customer_queue([])
         # Act
-        response = self.app.get('/v1/appointment/next')
+        response = self.app.get("/v1/appointment/next")
 
         # Assert
         self.assertEqual(response.status_code, 200)
         self.assertIsNotNone(json.loads(response.data))
         # Act
-        response = self.app.get('/v1/appointment/next')
+        response = self.app.get("/v1/appointment/next")
 
         # Assert
         self.assertEqual(response.status_code, 500)
         self.assertEqual(str(response.data), "b'No customer found in queue'")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

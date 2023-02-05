@@ -7,7 +7,7 @@ class PrirorityScheduler:
     """
     Class for scheduling appointments based on priority.
     """
-    
+
     def __init__(self) -> None:
         """
         Constructor to initialize required components.
