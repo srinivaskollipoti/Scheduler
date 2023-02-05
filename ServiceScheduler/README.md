@@ -19,7 +19,9 @@ Mysql: A Relational database which holds customers and in-person appointment dat
      mysql           : A MySQL schema and test data
 
 
-### System Design
+## System Design
+
+<img width="932" alt="Screen Shot 2023-02-05 at 1 17 06 AM" src="https://user-images.githubusercontent.com/54916661/216804814-8732aa0e-bee0-46df-afba-bf44023a398e.png">
 
 
 
