@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  mysql:
+    build:
+      context: ./mysql/
+    restart: always
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+
+  checkin:
+    build:
+      context: checkin/
+    volumes:
+      - ./checkin:/app
+    ports:
+      - 5000:5000
+    environment:
+      PYTHONUNBUFFERED: 1
+
+  scheduler:
+    build:
+      context: scheduler/
+    volumes:
+      - ./scheduler:/app
+    ports:
+      - 5001:5001
+    environment:
+      PYTHONUNBUFFERED: 1
