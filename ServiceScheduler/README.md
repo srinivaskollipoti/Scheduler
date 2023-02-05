@@ -21,7 +21,8 @@ Mysql: A Relational database which holds customers and in-person appointment dat
 
 ## System Design
 
-<img width="932" alt="Screen Shot 2023-02-05 at 1 17 06 AM" src="https://user-images.githubusercontent.com/54916661/216804814-8732aa0e-bee0-46df-afba-bf44023a398e.png">
+<img width="932" alt="<img width="912" alt="Screen Shot 2023-02-05 at 1 20 05 AM" src="https://user-images.githubusercontent.com/54916661/216804903-a8b68055-1a07-4825-825a-4f7ed2fa4d94.png">
+Screen Shot 2023-02-05 at 1 17 06 AM" src="https://user-images.githubusercontent.com/54916661/216804814-8732aa0e-bee0-46df-afba-bf44023a398e.png">
 
 
 
@@ -96,6 +97,9 @@ A sample payload :
 
  MySQL database constitutes sample test  data and a snapshot of the CUSTOMER & APPOINTMENT table :
  
+ 
+![Uploading Screen Shot 2023-02-05 at 1.20.05 AM.png…]()
+<img width="1000" alt="Screen Shot 2023-02-05 at 1 19 37 AM" src="https://user-images.githubusercontent.com/54916661/216804905-44db9e30-1a79-4bda-99ac-12a181ad4c32.png">
 
 
        
