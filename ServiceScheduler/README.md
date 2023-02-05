@@ -97,7 +97,7 @@ A sample payload :
 
  MySQL database constitutes sample test  data and a snapshot of the CUSTOMER & APPOINTMENT table :
  
- CUSTONER:
+ CUSTOMER:
  
  <img width="1000" alt="Screen Shot 2023-02-05 at 1 19 37 AM" src="https://user-images.githubusercontent.com/54916661/216804942-9e487689-d3b5-4f7f-8796-06eaa35ba048.png">
  
