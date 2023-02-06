@@ -22,8 +22,8 @@ MySQL: A MySQL schema and test data.
 
 ## System Design
 
+<img width="941" alt="Screen Shot 2023-02-05 at 10 57 01 PM" src="https://user-images.githubusercontent.com/54916661/216880659-9ca77243-77d2-43a9-93cb-19915760ec9c.png">
 
-<img width="932" alt="Screen Shot 2023-02-05 at 1 17 06 AM" src="https://user-images.githubusercontent.com/54916661/216805003-f7e180c3-df8e-40da-890a-79e24e6c1d7e.png">
 
 
 
