@@ -30,7 +30,7 @@ def get_next_customer() -> Dict:
 
         if next_customer:
             cid = ap_service.update(next_customer)
-            
+
         return make_response(jsonify(cid), 200)
 
     except Exception as e:
