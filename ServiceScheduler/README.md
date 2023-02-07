@@ -33,6 +33,8 @@ MySQL: A MySQL schema and test data.
 2. Python version > 3.8
 3. Preferred IDE (VS CODE, PyCharm)
 4. Postman
+5. Redis
+6. MySQL
 
 To install Docker, go to Docker official page (https://docs.docker.com/engine/install/), Download the executable based on your machine platform and run the executable on the machine.
 
