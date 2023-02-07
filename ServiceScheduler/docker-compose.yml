@@ -1,6 +1,13 @@
 version: '3.8'
 
 services:
+
+  rabbitmq:
+    image: 'rabbitmq:3.6-management-alpine'
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+
   mysql:
     build:
       context: ./mysql/
@@ -12,6 +19,13 @@ services:
       - 3306:3306
     expose:
       - 3306
+
+  redis:
+    image: 'redis:6.0-alpine'
+    restart: always
+    hostname: redis
+    ports:
+      - '6379:6379'
 
   checkin:
     build:

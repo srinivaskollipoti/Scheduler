@@ -6,6 +6,7 @@ from mysql_client.client import DatabaseHandle
 
 logging.basicConfig(level=logging.DEBUG)
 
+
 class CheckinDao:
     """
     Class to insert appointments in the database.

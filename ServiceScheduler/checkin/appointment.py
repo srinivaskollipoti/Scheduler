@@ -1,10 +1,12 @@
 import json
 import logging
-from typing import Dict
-from flask import Flask, Response, jsonify, make_response, request
-
 from exceptions.customer_exception import CustomerNotFoundException
 from exceptions.request_exception import RequestException
+from typing import Dict
+
+from flask import Flask, Response, jsonify, make_response, request
+
+from message_queue.publisher import MessageQueue
 from model.customer import Customer
 from service.checkin_service import CheckinService
 from service.customer_validation_service import CustomerValidationService
@@ -12,8 +14,10 @@ from service.customer_validation_service import CustomerValidationService
 PERMITTED_TYPES = ["application/json"]
 
 app = Flask(__name__)
+
 customer_service = CustomerValidationService()
 checkin_service = CheckinService()
+mq_service = MessageQueue()
 
 
 @app.route("/v1/appointment", methods=["POST"])
@@ -41,6 +45,7 @@ def create_appointment() -> Dict:
 
         if customer_service.validate(customer):
             checkin_id = checkin_service.checkin(customer)
+            mq_service.publish(json.dumps(customer.__dict__))
             return make_response(jsonify({"service_id": checkin_id}), 200)
         else:
             raise CustomerNotFoundException("Customer record not found")

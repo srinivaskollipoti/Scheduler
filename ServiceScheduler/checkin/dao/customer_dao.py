@@ -70,7 +70,8 @@ class CustomerDao:
 
         except Exception as e:
             logging.error(
-                "Unable to retrieve customer details from the CUSTOMER table: %s", str(e)
+                "Unable to retrieve customer details from the CUSTOMER table: %s",
+                str(e),
             )
             raise e
 
